@@ -15,4 +15,8 @@ services:
         - action: rebuild
           path: ./backend/pyproject.toml
     volumes:
-      - /app/venv
+      - sales-order-inv-lite_python3-14_venv:/app/venv
+
+volumes:
+  sales-order-inv-lite_python3-14_venv:
+    driver: local
