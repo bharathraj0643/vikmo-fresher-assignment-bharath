@@ -12,6 +12,13 @@
     "ghcr.io/devcontainers/features/docker-in-docker:2": {
       "moby": false
     }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Codeium.codeium"
+      ]
+    }
   }
 
   // Features to add to the dev container. More info: https://containers.dev/features.

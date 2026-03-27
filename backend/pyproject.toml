@@ -1,0 +1,7 @@
+[project]
+name = "sales-order-inventory-lite"
+version = "0.1.0"
+description = "A project on Django, DRF to build a management system of order and inventory with postgres "
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
