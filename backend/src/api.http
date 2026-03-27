@@ -1,0 +1,116 @@
+GET http://localhost:8000/orders/ HTTP/1.1
+# Content-Type: application/json
+# Authorization: Bearer 
+###
+
+POST http://localhost:8000/api/token/ HTTP/1/1
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": ""
+}
+###
+POST http://localhost:8000/products/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+    "name" : "TV",
+    "price" : 300,
+    "stock" : 14,
+    "description" : "An Amazing TV"
+}       
+
+###
+
+GET http://localhost:8000/products/1 HTTP/1.1
+
+###
+
+PUT http://localhost:8000/products/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+    "name" : "TV",
+    "price" : 300,
+    "stock" : 14,
+    "description" : "An Amazing TV"
+}   
+
+###
+
+DELETE http://localhost:8000/products/1 HTTP/1.1
+Authorization: Bearer 
+
+###
+
+POST http://localhost:8000/api/token/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "username" : "",
+    "password" : ""
+}
+
+###
+
+POST http://localhost:8000/api/token/refresh/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "refresh" : ""
+}
+
+###
+
+GET http://localhost:8000/orders/fc0b5c5e-5556-43ec-a44e-5eb79d62bba1/ HTTP/1.1
+Authorization: Bearer 
+
+###
+
+POST http://localhost:8000/orders/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+    "status" : "Confirmed",
+    "items" : [
+        {
+            "product":1,
+            "quantity":1
+        },
+        {
+            "product":2,
+            "quantity":1
+        }
+    ]
+}     
+
+###
+
+PUT http://localhost:8000/orders/5d7b51ab-4f39-458c-b61c-6d3cab6d381d/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+    "status" : "Confirmed",
+    "items" : [
+        {
+            "product":3,
+            "quantity":1
+        },
+        {
+            "product":5,
+            "quantity":1
+        }
+    ]
+}     
+
+###
+
+DELETE http://localhost:8000/orders/5d7b51ab-4f39-458c-b61c-6d3cab6d381d/ HTTP/1.1
+Authorization: Bearer 
+
+###

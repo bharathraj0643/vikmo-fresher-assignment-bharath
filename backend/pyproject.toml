@@ -1,10 +1,16 @@
 [project]
 name = "sales-order-inventory-lite"
 version = "0.1.0"
-description = "A project on Django, DRF to build a management system of order and inventory with postgres "
+description = "A project on Django, DRF to build a management system of order and inventory"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "django>=6.0.3",
+    "django-extensions>=4.1",
+    "django-filter>=25.2",
+    "django-silk>=5.5.0",
     "djangorestframework>=3.17.1",
+    "djangorestframework-simplejwt>=5.5.1",
+    "drf-spectacular>=0.29.0",
+    "pillow>=12.1.1",
 ]

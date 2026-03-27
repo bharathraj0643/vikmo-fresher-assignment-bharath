@@ -12,8 +12,8 @@ COPY pyproject.toml .
 
 RUN uv sync
 
-COPY  src/ .
+COPY  . .
 
 EXPOSE 8000
 
-CMD ["uv", "run", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["sh", "-c", "cd src && uv run manage.py migrate --noinput && uv run manage.py runserver 0.0.0.0:8000"]

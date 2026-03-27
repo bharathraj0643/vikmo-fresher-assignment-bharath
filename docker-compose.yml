@@ -8,10 +8,10 @@ services:
     develop:
       watch:
         - action: sync
-          path: ./backend
-          target: /app
+          path: ./backend/src
+          target: /app/src
           ignore:
-            - ./venv
+            - ../venv
         - action: rebuild
           path: ./backend/pyproject.toml
     volumes:
